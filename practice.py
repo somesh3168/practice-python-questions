@@ -90,5 +90,17 @@ sample = 'python'
 print(''.join([sample[-1],sample[1:-1],sample[0]]))
 # op = nythop
 
+# 16. Write a Python function to insert a string in the middle of a string. Go to the editor
+# Sample function and result :
+# insert_sting_middle('[[]]<<>>', 'Python') -> [[Python]]
+# insert_sting_middle('{{}}', 'PHP') -> {{PHP}}
+
+def insert_sting_middle(text1, mid):
+    text1 = text1.split(' ')
+    text1.insert(1,mid)
+    print(' '.join(text1))
+
+
+insert_sting_middle('ranga billa','bc')
 
 
