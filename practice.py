@@ -59,7 +59,7 @@ if spoor > snot and snot>0 and spoor>0:
 else:
     print(samples)
 
-# Write a Python function that takes a list of words and returns the length of the longest one.
+# 8. Write a Python function that takes a list of words and returns the length of the longest one.
 
 samples = ["PHP", "Exercises", "Backend"]
 ret = {}
@@ -80,12 +80,12 @@ for i,v in enumerate (samples):
         print('\nLongest word:',v)
         print('Length of the longest word: ',m)
         
-# Write a Python program to remove the nth index character from a nonempty string.
+# 9. Write a Python program to remove the nth index character from a nonempty string.
 
 sample,n = 'python' , 2
 print(''.join(sample.split(sample[n])))
 
-# Write a Python program to change a given string to a new string where the first and last chars have been exchanged.
+# 10. Write a Python program to change a given string to a new string where the first and last chars have been exchanged.
 sample = 'python' 
 print(''.join([sample[-1],sample[1:-1],sample[0]]))
 # op = nythop
