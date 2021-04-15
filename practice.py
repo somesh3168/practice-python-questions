@@ -48,5 +48,15 @@ print(samples)
 # Expected Result : 'The lyrics is good!'
 # 'The lyrics is poor!'
 
+samples = 'The lyrics is not that poor!'
+snot = samples.find('not')
+spoor = samples.find('poor')
+  
+
+if spoor > snot and snot>0 and spoor>0:
+    samples = samples.replace(samples[snot:(spoor+4)], 'good')
+    print(samples)
+else:
+    print(samples)
 
 
