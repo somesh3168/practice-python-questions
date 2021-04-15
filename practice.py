@@ -21,6 +21,32 @@ abc ,xyz = abc.replace(abc[-1],xyz[-1]), xyz.replace(xyz[-1],abc[-1])
 print(xyz+' '+abc)
 
 
-# Write a Python program to add 'ing' at the end of a given string (length should be at least 3). 
+# 6. Write a Python program to add 'ing' at the end of a given string (length should be at least 3). 
 # If the given string already ends with 'ing' then add 'ly' instead. 
 # If the string length of the given string is less than 3, leave it unchanged.
+# Sample String : 'abc'
+# Expected Result : 'abcing'
+# Sample String : 'string'
+# Expected Result : 'stringly'
+samples = ['star','kid','amazing', 'to']
+
+for i,sample in enumerate(samples):
+    if sample[-3:] == 'ing':
+        samples[i] = sample+'ly'
+    elif len(sample) >2:
+        samples[i] = sample + 'ing'
+    else:
+        samples[i] = sample
+
+print(samples)
+
+# 7. Write a Python program to find the first appearance of the substring 'not' and 'poor' from a given string, 
+# if 'not' follows the 'poor', replace the whole 'not'...'poor' substring with 'good'. 
+# Return the resulting string. Go to the editor
+# Sample String : 'The lyrics is not that poor!'
+# 'The lyrics is poor!'
+# Expected Result : 'The lyrics is good!'
+# 'The lyrics is poor!'
+
+
+
