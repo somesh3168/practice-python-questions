@@ -1,3 +1,25 @@
+# 4. Write a Python program to get the factorial of a non-negative integer. Go to the editor
+# Click me to see the sample solution
+# basic
+def facto(num):
+    f = 1
+    for i in range(1,num+1,1):
+        f*=i
+    return f
+    
+print(facto(5))
+# factorial recursion
+
+def facto(num):
+    if num <= 1:
+        return 1
+    else:
+        return num* (facto(num-1))
+    
+print(facto(5))
+
+
+
 # 4. Write a Python program to get a string from a given string where all occurrences of its first char have been changed to '$', except the first char itself. Go to the editor
 # Sample String : 'restart'
 # Expected Result : 'resta$t'
