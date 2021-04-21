@@ -29,3 +29,18 @@ else:
     
 print(count,f)
 
+#######################################
+####### bubble sort Algo
+les = [3,1,6,8]
+# bubble sort
+count = 0
+
+for i in range(len(les)-1,0,-1):
+    print(les[i],i,len(les))
+    for j in range(i):
+        count+=1
+        if les[j]>les[j+1]:
+            les[j],les[j+1] =les[j+1],les[j]
+            
+    
+print(les,count)
