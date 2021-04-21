@@ -103,4 +103,46 @@ def insert_sting_middle(text1, mid):
 
 insert_sting_middle('ranga billa','bc')
 
+# recursion
+# 1. Write a Python program to sum all the items in a list. Go to the editor
+# Click me to see the sample solution
+
+les = [1,2,3,4]
+
+def sum_li(les=[]):
+    if len(les) == 1:
+        return les[0]
+    else:
+        return les[0] + sum_li(les[1:])
+        
+    
+print(sum_li(les))
+
+# 2. Write a Python program to multiplies all the items in a list. Go to the editor
+# Click me to see the sample solution
+
+
+les = [111,2,33,4,5]
+maxi = les[0]
+for v in les:
+    if v > maxi:
+        maxi = v
+print(maxi)
+
+# 2. Write a Python program to converting an Integer to a string in any base. Go to the editor
+# Click me to see the sample solution
+# DEcimal to any base
+
+def to_string(n,base):
+    
+    all_base = '0123456789ABCDEF'
+    
+    if n < base:
+        return all_base[n]
+    else:
+        return to_string(n//base, base) + all_base[n%base]
+        
+print(to_string(189,10))
+
+
 
