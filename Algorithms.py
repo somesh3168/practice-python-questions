@@ -1,3 +1,16 @@
+############# Decimal to Binary algo
+ls = []
+def dec_to_bin(x):
+    if x:
+        if x >= 1:
+            dec_to_bin(x//2)
+        # print(x%2,end='')
+        ls.append(x%2)
+    return ''.join(list(map(str,ls)))
+
+
+print(dec_to_bin(50))
+
 #######################################
 ####### Binary Search Algo
 les = [1, 3, 7, 9, 14, 19, 45]
