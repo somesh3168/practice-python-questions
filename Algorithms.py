@@ -1,3 +1,14 @@
+######### binary to decimal
+def bin_to_dec(x:str):
+    x = ''.join(reversed(x))
+    tot = 0
+    for i,v in enumerate(x):
+        tot+=(int(v)*(2**int(i)))
+    return (tot)
+
+
+print(bin_to_dec('1001'))
+
 ############# Decimal to Binary algo
 ls = []
 def dec_to_bin(x):
