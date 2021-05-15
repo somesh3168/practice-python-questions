@@ -13,3 +13,11 @@ sudo service mongod status/start
 # 4 . Ensure that it restarts automatically at each boot
 
 sudo systemctl enable mongod
+
+# then 
+mongo
+#check ports
+nmap -p- localhost
+#  add documents
+# https://zellwk.com/blog/local-mongodb/
+
