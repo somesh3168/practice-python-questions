@@ -1,3 +1,5 @@
+source: https://studygyaan.com/django/how-to-setup-django-applications-with-apache-and-mod-wsgi-on-ubuntu
+
 # cd to file etc/apache2/sites-available
 # 000-default.conf,  default-ssl.conf
 # add lines into nano 000-default.conf -- before Error Log
