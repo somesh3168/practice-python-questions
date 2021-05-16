@@ -12,8 +12,21 @@ Alias /static /var/www/<mongoproj:project_name>/static
   </Files>
   Require all granted
 </Directory>
+..
+..
+	  Alias /static /var/www/djangomac/static
+    <Directory /var/www/djangomac/static>
+        Require all granted
+    </Directory>
+	
+	<Directory /var/www/djangomac/djangomacproj>
+        <Files wsgi.py>
+            Require all granted
+        </Files>
+    </Directory>
+    --------
 
-WSGIDeamonProcess <mongoproj> python-path=/var/www/mongoproj python-home=/var/www/<env:virtualenv path>
+WSGIDaemonProcess <mongoproj python-path=/var/www/mongoproj python-home=/var/www/<env:virtualenv path>
 WSGIProcessGroup mongoproj
 WSGIScriptAlias / /var/www/mongoproj/mongoproj/wsgi.py
 
@@ -22,6 +35,8 @@ sudo a2dissite 000-default.conf
 ...enable site again
 sudo a2ensite 000-default.conf
 
-WSGIDaemonProcess djangomac python-path=/var/www/djangomac python-home=/var/www/djangomac/djangomac
-    WSGIProcessGroup djangomac
-    WSGIScriptAlias / /var/www/djangomac/djangomacproj/wsgi.py
+sudo tail /var/log/apache2/error.log
+
+WSGIDaemonProcess mongoproj python-path=/var/www/env python-home=/var/www/mongoproj/mongoproj
+    WSGIProcessGroup mongoproj
+    WSGIScriptAlias / /var/www/mongoproj/mongoproj/wsgi.py
