@@ -43,3 +43,8 @@ sudo tail /var/log/apache2/error.log
 WSGIDaemonProcess mongoproj python-path=/var/www/env python-home=/var/www/mongoproj/mongoproj
     WSGIProcessGroup mongoproj
     WSGIScriptAlias / /var/www/mongoproj/mongoproj/wsgi.py
+    
+    
+    problem in migrate...update django mongoproj git
+    settings.py file with>>
+    DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
