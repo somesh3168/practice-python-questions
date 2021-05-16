@@ -26,7 +26,7 @@ Alias /static /var/www/<mongoproj:project_name>/static
     </Directory>
     --------
 
-WSGIDaemonProcess <mongoproj python-path=/var/www/mongoproj python-home=/var/www/<env:virtualenv path>
+WSGIDaemonProcess <mongoproj python-path=/var/www/mongoproj python-home=/var/www/mongoproj/env/lib/python3.6/site-packages
 WSGIProcessGroup mongoproj
 WSGIScriptAlias / /var/www/mongoproj/mongoproj/wsgi.py
 
@@ -34,6 +34,7 @@ WSGIScriptAlias / /var/www/mongoproj/mongoproj/wsgi.py
 sudo a2dissite 000-default.conf
 ...enable site again
 sudo a2ensite 000-default.conf
+sudo service apache2 restart
 
 sudo tail /var/log/apache2/error.log
 
