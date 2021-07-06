@@ -1,3 +1,26 @@
+## Prime number function using binary approach
+import time
+
+# starting time
+start = time.time()
+
+#body 
+
+def is_prime(x):
+    for i in range(2,x,x//2):
+        print(i,end='-')
+        if x%i==0:
+            return False
+    else:
+        return True
+print(is_prime(2347))
+# end time
+end = time.time()
+
+# total time taken
+print("Runtime of the program is", end - start)
+
+
 ######### binary to decimal
 def bin_to_dec(x:str):
     x = ''.join(reversed(x))
