@@ -1,4 +1,4 @@
-## Prime number function using binary approach
+## Prime number function using binary approach - Flawwweddddddddddd
 import time
 
 # starting time
