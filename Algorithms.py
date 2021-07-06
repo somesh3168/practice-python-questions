@@ -1,3 +1,17 @@
+## Prime number function using skipping half approach - 
+def prime(num1):
+    if num1 ==1:
+        return 'no prime no consecutive'
+    for i in range(1,num1, 2):
+        # print(i)
+        if num1%i==0 and i!=1:
+            # print(i)
+            return 'NonPrime'
+            # break
+    else:
+        return 'Prime'
+        
+print(prime(234511))
 ## Prime number function using binary approach - Flawwweddddddddddd
 import time
 
