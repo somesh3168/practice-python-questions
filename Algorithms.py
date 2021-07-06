@@ -1,15 +1,18 @@
 ## Prime number function using skipping half approach - 
 def prime(num1):
-    if num1 ==1:
-        return 'no prime no consecutive'
-    for i in range(1,num1, 2):
+    if num1 ==1 or num1==0:
+        return False
+    for i in range(3,num1, 2):
         # print(i)
-        if num1%i==0 and i!=1:
-            # print(i)
-            return 'NonPrime'
-            # break
+        if num1%i==0 or num1%2==0:
+            return False
     else:
-        return 'Prime'
+        return True
+        
+# print(prime(88))
+for i in range(0,30):
+    if prime(i):
+        print(i,end=' ')
         
 print(prime(234511))
 ## Prime number function using binary approach - Flawwweddddddddddd
