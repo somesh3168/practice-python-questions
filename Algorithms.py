@@ -1,3 +1,12 @@
+## Prime factorization
+
+
+def prime_factor(x):
+    prime_list = list(filter(prime,[i for i in range(x+1) if i%2!=0 or i==2]))
+    return [i for i in prime_list if x%i==0]
+
+print(prime_factor(3168))
+
 ## Prime number function using skipping half approach - 
 def prime(num1):
     if num1 ==1 or num1==0:
