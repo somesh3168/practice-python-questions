@@ -8,7 +8,7 @@ def facto(num):
     return f
     
 print(facto(5))
-# factorial recursion
+# factorial re - cursion
 
 def facto(num):
     if num <= 1:
